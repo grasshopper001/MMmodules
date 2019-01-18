@@ -9,6 +9,7 @@ By default(userType=="userDefault"), we display the commuting information for th
 [MMM-Page-Selector](https://github.com/Veldrovive/MMM-Page-Selector), 
 place these folders under `~/MagicMirror/modules/`.
 * Other modules could also be included and shown on certain page as long as they are added to the config.
+* If different url is introduced in different pages, please copy the folder MMM-webFrame, and refactor the copied module with another name such as "MMM-webFrame1"
 ---
 ## Configuration
 ---
@@ -30,7 +31,7 @@ place these folders under `~/MagicMirror/modules/`.
     		module:"MMM-webFrame",
 			position: 'top_right',	
 		    config: {
-				url: ["http://47.96.26.134:3000"],  
+				url: ["http://www.baidu.com"],  
 				updateInterval: 10000, 
 				
 			},
@@ -54,10 +55,10 @@ place these folders under `~/MagicMirror/modules/`.
 			config: {
 				mqttServers: [
 					{
-						address: '47.96.26.134',  // Server address or IP address
+						address: 'localhost:3000',  // Server address or IP address
 						port: '1883',          // Port number if other than default
-						user: 'admin',          // Leave out for no user
-						password: 'admin',  // Leave out for no password
+						user: 'username',          // Leave out for no user
+						password: 'password',  // Leave out for no password
 						subscriptions: [
 							{
 								topic: 'traffic'// Topic to look for
@@ -74,12 +75,13 @@ place these folders under `~/MagicMirror/modules/`.
     ],
     pages: {
     	main: {
-			"clock": "top_left"
+			"clock": "top_left",
+			//"MMM-webFrame1":"top_right"
 		},
 		user1: {
 			"MMM-webFrame": "top_right",
 			"MMM-DrivingTime": "bottom_right",
-		    //"MMM-NBA":"top_left"
+		        //"MMM-NBA":"top_left"
 		},
 		userDefault:{
 			"MMM-webFrame": "top_right",
