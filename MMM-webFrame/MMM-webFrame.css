@@ -1,0 +1,11 @@
+#roadCondition{
+    border-style: none;
+    border-width: 0px;
+}
+#wrapper.pos_fixed{
+    border-style: none;
+    border-width: 0px;
+    position:right;
+    top:0px;
+    right:0px;
+}
