@@ -52,11 +52,10 @@ Module.register("MMM-ControlPanel",{
                      }
                  },1000) 
                   break;
-            
-            case "traffic":
-                 this.showUserPage=true;
             case "user":
                  this.user=payload;
+                 this.showUserPage=true;
+                 break;
             default:
                 break;
             }
